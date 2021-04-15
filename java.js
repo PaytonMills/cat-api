@@ -8,10 +8,10 @@ function setup() {
 function getCat() {
     fetch("https://aws.random.cat/meow")
         .then(response => response.json())
-        .then(data => updateCatImageSource(data.file));
+        .then(data => updateCatImageSrc(data.file));
 }
 
-function updateCatImageSource(src) {
+function updateCatImageSrc(src) {
     //get cat image element//
     let img = document.querySelector("img");
     //Update its src//
