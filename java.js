@@ -1,4 +1,10 @@
 
+setup();
+
+function setup() {
+    getcat();
+}
+
 function getcat() {
     fetch("https://aws.random.cat/meow")
         .then(response => response.json())
