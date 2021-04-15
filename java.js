@@ -2,16 +2,16 @@
 setup();
 
 function setup() {
-    getcat();
+    getCat();
 }
 
-function getcat() {
+function getCat() {
     fetch("https://aws.random.cat/meow")
         .then(response => response.json())
-        .then(data => updateCatImageSearch(data.file));
+        .then(data => updateCatImageSource(data.file));
 }
 
-function updateCatImageSearch(src) {
+function updateCatImageSource(src) {
     //get cat image element//
     let img = document.querySelector("img");
     //Update its src//
