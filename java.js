@@ -1,19 +1,18 @@
-
 setup();
 
 function setup() {
-    getCat();
+  getCat();
 }
 
 function getCat() {
-    fetch("https://aws.random.cat/meow")
-        .then(response => response.json())
-        .then(data => updateCatImageSrc(data.file));
+  fetch("https://aws.random.cat/meow")
+    .then(response => response.json())
+    .then(data => updateCatImgSrc(data.file));
 }
 
-function updateCatImageSrc(src) {
-    //get cat image element//
-    let img = document.querySelector("img");
-    //Update its src//
-    img.src = src;
+function updateCatImgSrc(src) {
+  /* Get the cat image element */
+  let img = document.querySelector("img");
+  /* Update its src*/
+  img.src = src;
 }
